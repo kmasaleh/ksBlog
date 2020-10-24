@@ -1,0 +1,24 @@
+.container{
+    border-style: solid;
+    border-color: silver;
+ /*   width: 950px;*/
+    border-width: 1.0pt;
+    border-radius: 10px;
+}
+
+.toggle-code{
+    height:50px;
+}
+.toggle-code button{
+    float: right;
+    color: lightgray;
+}
+.demo{
+    margin: 20px;
+    text-align: center;
+}
+.demo-title {
+    
+    display: inline;
+    
+}
