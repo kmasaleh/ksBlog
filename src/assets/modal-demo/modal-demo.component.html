@@ -1,0 +1,117 @@
+<div class="container" >
+    <div style="margin-bottom:75px;margin-left:250px;margin-top: 50px;">
+        <div style="display: inline-block;">
+            <img src="./assets/angular-icon-1.svg"  width="100px;" height="100px;">
+        </div>
+        <div style="display: inline-block; font-size: 180%;vertical-align: middle;margin-left:15px;">
+        <p >Angular Custom Modal Component </p>
+        <p style="font-size:14px;font-weight: 100;color:green">   Published 26 October 2020 . 15 min read . 0 comments</p>
+        </div>
+    </div>
+    
+    <div style="font-size: 120%;margin:30px;line-height: 200%;">
+        <p>Here we have a simple angular library named @ksaleh/modal that you may install it by issuing the <span style="background-color: #000000; color: #ffffff;">npm i @ksaleh/modal</span> from node command prompt.
+        The library provides a simple custom modal component aka "Dialog Box" you may used it for multi purposes inside your code.</p>
+    </div>
+    <app-widget-demo [CodeDescriptors]="CodeDescriptors"  Title="Modal Library">
+    </app-widget-demo>
+
+    <div class="demo-container">
+        <p style="font-size: 16px;line-height: 200%;">
+            The modal component is a reusable widget that can be used for multiple purposes.
+            It may display a simple informational message telling the user something like the application is about to delete somthing
+            or displaying a feed back from a server process.
+            You will desgin the template that is used inside the modal by yourself so you may tell if it has a draggable 
+            caption, contain some icon or picture or even buttons and inputs.
+            You will supply all of that information through a congiuration object that is registered by using a template 
+            registeration service along with an instance of a data provider context object that is used to bind with the template elements with data.
+            After that you can hook your methods for intercepting the modal events which will be triggered during execution and 
+            upon exiting from the modal.
+        </p>
+        <div class="demo-content">
+            <button mat-raised-button color="warn"  (click)="OnDeleteModal()" >Delete Modal</button>    
+            <button mat-raised-button color="primary"  (click)="OnInfoModal()" >Info Modal</button>    
+            <button mat-raised-button (click)="OnThreeButtonsModal()" >Three Buttons Modal</button>    
+            <button mat-raised-button color="accent"  (click)="OnSimpleModal()" >Simple Modal</button>    
+            
+        </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin-left:0">
+    <div  >
+      ewrewrewr
+      <!--
+      <div class="fb-follow" data-href="https://kmasaleh.github.io/modal" data-width="" data-layout="button_count" data-action="follow" data-size="large" data-share="true"></div>
+      <div class="fb-like" data-href="https://kmasaleh.github.io/modal" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+      
+      <br/>
+      <div class="fb-comments" data-href="https://kmasaleh.github.io/modal" data-numposts="5" data-width=""></div>
+      -->
+    </div>
+</div>
+<ng-container #msgBox> </ng-container>
+
+
+<ng-template templateRefBinder="Delete" let-Data="Data" >
+    <div style="display: inline-block;">
+        <mat-icon style="font-size: 32px;color:red;">stop_circle</mat-icon>
+    </div>
+    <h2>This recored will be deleted</h2>
+    <h3>Are you sure?</h3>
+</ng-template>
+
+<ng-template templateRefBinder="Info" let-Data="Data" >
+    <div style="display: inline-block;">
+        <mat-icon style="font-size: 48px;color:green;">info</mat-icon>
+    </div>
+    <h2>Here is your profile data</h2>
+    
+    <p>
+        <mat-form-field appearance="standard">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter your name" [(ngModel)]="Data['Name']">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Khaled Saleh</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="standard">
+          <mat-label>EMail</mat-label>
+          <input matInput placeholder="Enter your e.mail" [(ngModel)]="Data['EMail']">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>somebody@gmail.com</mat-hint>
+        </mat-form-field>
+      </p>
+
+</ng-template>
+
+<ng-template [templateRefBinder]="'RandomPictures'"  let-Data="Data" let-Icon ="Icon"
+                let-Image="Image"> 
+    <div style="display: inline-block;">
+      <fa-icon [icon]="Icon" size="5x"></fa-icon>
+    </div>
+    <h1>Random Pictures</h1>
+    <div style="background-color: chartreuse;margin:4px;font-size: 16px;"><b>Life is so pretty</b> </div>
+    <p>
+        <mat-form-field appearance="standard">
+          <mat-label>Photo size</mat-label>
+          <input matInput placeholder="Enter size" [(ngModel)]="Data['Size']">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>ex:200 - max size is:350</mat-hint>
+        </mat-form-field>
+      </p>
+
+
+    <div >
+      <img [src]="Image" alt="random image"/>
+    </div>
+    
+
+</ng-template>  
+
+<ng-template [templateRefBinder]="'Simple'"  ></ng-template>
+
+
+
+
+
+

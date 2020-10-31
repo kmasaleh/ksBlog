@@ -1,0 +1,74 @@
+import { Component, OnInit, QueryList, ViewChild, ViewChildren, ViewContainerRef } from '@angular/core';
+import { Subscription } from 'rxjs';
+import {TemplateRefBinderDirective,TemplateProviderService, ALERT_CLASS, ModalConfig,ModalButton,ModalService } 
+from '@ksaleh-ng/modal';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { HttpClient } from '@angular/common/http';
+import {Info} from './info';
+import { RandomPictures } from './random-pictures';
+import { Simple } from './simple';
+
+
+@Component({
+  selector: 'app-modal-demo',
+  templateUrl: './modal-demo.component.html',
+  styleUrls: ['./modal-demo.component.css']
+})
+export class ModalDemoComponent implements OnInit {
+  @ViewChild('msgBox', { read: ViewContainerRef })  msgBox : ViewContainerRef
+  @ViewChildren(TemplateRefBinderDirective) templateRefs : QueryList<TemplateRefBinderDirective>;
+  css :string;
+  html:string;
+  ts :string;
+  constructor(private templateProviderService:TemplateProviderService,
+    private modalSerivce:ModalService,  private http:HttpClient) { 
+
+    }
+
+
+
+
+  ngOnInit(): void {
+    let that=this;  
+    this.http.get('/assets/modal-demo.component.txt', { responseType: 'text' }).subscribe(data => {
+      that.ts= data;
+  })
+  }
+  ngAfterViewInit() {
+    this.templateProviderService.Add(this.templateRefs.toArray());
+  }
+
+  modalSubscribtion :Subscription;
+  info:Info;
+  OnInfoModal(){
+    this. info  = new Info(this.modalSerivce,this.msgBox,"khaled saleh",new Date ("08/20/1965"),"01011824456","someone@gmail.com");
+    this.info.Show();
+  }
+  OnDeleteModal(){
+    let c = new ModalConfig();
+        c.Width = 300;
+        c.HasCaption =true;
+        c.Title = "Delete Record";
+        c.TempalteName = "Delete";
+        c.Alert = ALERT_CLASS.Danger ;
+        c.Buttons= [ { Text:'Yes',Code:0,Exit:true}, 
+                     {Text:'No',Code:1,Exit:true}
+        ];
+        c.ViewContainer = this.msgBox;
+        this.modalSubscribtion= this.modalSerivce.ShowModal(c).Events.subscribe(
+          code=>{
+            if(code===0) alert('User clicked OK');
+            if(code===1) alert('User clicked NO');
+
+            this.modalSubscribtion.unsubscribe();
+            });
+  }
+
+  OnThreeButtonsModal(){
+    new RandomPictures(this.http,this.msgBox,this.modalSerivce).Show();
+  }
+  OnSimpleModal(){
+    new Simple(this.msgBox,this.modalSerivce,200).Show();
+  }
+  
+}

@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "types": ["facebook-js-sdk"],
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,

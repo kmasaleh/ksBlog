@@ -6,7 +6,7 @@
       <img class="avatar" src="./../assets/avataaars.png" alt="Programmer Avatar Image"/>
 
       <button mat-icon-button  aria-label="Home" matTooltip="Home page" matTooltipPosition="below" matTooltipHideDelay="100"
-        routerLink='home'
+        routerLink='home' style="margin-left: 450px;"
       >
         <mat-icon>home</mat-icon>
       </button>
@@ -17,9 +17,14 @@
         <mat-icon>article</mat-icon>
       </button>
 
+      <button mat-icon-button  aria-label="Modal Widget" matTooltip="Modal Component" matTooltipPosition="below" matTooltipHideDelay="100"
+        routerLink='modal' >
+        <mat-icon>library_add_check</mat-icon>
+      </button>
       
-      <a routerLink="modal" > Modal Widget      </a>
-
+      <img src="../assets/ain.png" style="width:30px;height:30px;" class="ain"
+        matTooltip="منشورات بالعربى" matTooltipPosition="below" matTooltipHideDelay="100"
+      />
       
 
     </mat-toolbar-row>
@@ -35,10 +40,10 @@
       
       <p>
         Hi, my name is Khaled Saleh, I'm a software eningneer since the early of 90's.
+        This is my personal web site that I use for blogging thoughts both technical and general
       </p>
       <p>
-        This is my personal web site that may I use for blogging thoughts both technical or general and also my work samples.
-        I hope you find something interesting here.
+        Hoping you find something interesting here.
       </p>
       <p>
         Thank you for visting and have a good day.
@@ -47,7 +52,7 @@
 
       <ul class="navbar-nav" style="text-align: left;margin-left: 20px;">
         <li class="nav-item">
-          <button routerLink='home' mat-icon-button  aria-label="Home" matTooltip="Home page" matTooltipPosition="below" matTooltipHideDelay="100">
+          <button routerLink='home' mat-icon-button  aria-label="Home" matTooltip="Home page" matTooltipPosition="right" matTooltipHideDelay="100">
             <mat-icon>home</mat-icon>
             Blog home
           </button>
@@ -55,7 +60,7 @@
 
 
         <li class="nav-item">
-          <button mat-icon-button  aria-label="Home" matTooltip="Blogs" matTooltipPosition="below" matTooltipHideDelay="100"
+          <button mat-icon-button  aria-label="Home" matTooltip="Blogs" matTooltipPosition="right" matTooltipHideDelay="100"
             routerLink='technical-blogs'
           >
             <mat-icon>article</mat-icon>

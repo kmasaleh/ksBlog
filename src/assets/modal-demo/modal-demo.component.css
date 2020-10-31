@@ -1,0 +1,16 @@
+.container{
+    border-style: solid;
+    border-color: silver;
+    border-width: 1.0pt;
+    border-radius: 10px;
+    margin-bottom: 30px;   
+}
+
+.demo-container{
+    margin: 50px ;
+}
+
+
+.demo-content button{
+    margin:50px;
+}

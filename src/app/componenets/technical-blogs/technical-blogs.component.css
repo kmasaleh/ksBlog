@@ -1,0 +1,12 @@
+.box{
+    width: 900px;
+    height: 180px;
+    margin: 50px;
+    margin-left: 150px;
+    background-color: white;
+    border: none;
+}
+
+.link button :hover {
+  text-decoration: underline;
+}

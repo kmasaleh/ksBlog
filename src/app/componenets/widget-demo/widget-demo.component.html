@@ -1,11 +1,12 @@
-<div class="container" >
+<div class="container">
+    
     <div  class="toggle-code"> 
         <div style="margin-top: 20px;">
-        <span ><h2 class="demo-title">Modal component</h2> </span>
+        <span ><h3 class="demo-title" >{{Title}}</h3> </span>
         <button mat-icon-button  aria-label="code" (click)="ToggleCode()"
             matTooltip="Toggle code"
             matTooltipPosition="below"
-            matTooltipHideDelay="100000"
+            matTooltipHideDelay="100"
         >
             <mat-icon>code</mat-icon>
         </button>
@@ -15,47 +16,17 @@
 
     <div class="code-container">
         <mat-tab-group *ngIf="CodeView" (selectedTabChange)="tabSelected($event)">
-            <mat-tab label="HTML">
-                <app-code   [CodeText]="html" CodeClass="html hljs">    </app-code>
-            </mat-tab>
-            <mat-tab label="TS">
-                <app-code   [CodeText]="code" CodeClass='typescript'>    </app-code>
-            </mat-tab>
-            <mat-tab label="CSS">
-                <app-code  [CodeText]="css" CodeClass='css'>    </app-code>
-            </mat-tab>
+            <ng-container *ngFor="let descriptor of CodeDescriptors">
+                <mat-tab label={{descriptor.Title}} >
+                    <app-code   CodeText={{descriptor.CodeText}} CodeClass={{descriptor.CodeClass}}>    </app-code>
+                </mat-tab>    
+            </ng-container>
+        
         </mat-tab-group>
     </div>
     <hr style="width:100%;text-align:left;margin-left:0">
-    
-    <div class="demo">
-        <button mat-raised-button color="accent"  (click)="OnMsgBox($event)" >Press To Show Modal</button>    
-    </div>
-
-</div>
+</div>    
 
 
-<ng-container #msgBox> </ng-container>
 
-<ng-template [templateRefBinder]="'BeeGees'" #beegees let-Data="Data" let-band="BandName" let-Icon ="Icon"
-   let-Image="Image" let-OnChange= "OnInputChange"> 
-    <div style="display: inline-block;">
-      <fa-icon [icon]="Icon" size="5x"></fa-icon>
-    </div>
-    <h1>Bee Gees</h1>
-    <h2><i>Staying Alive</i></h2>
-    <p> Lifes goes in no where, somebody help me yeah</p> 
-    <div style="background-color: chartreuse;margin: 4px;"><b>Barry Gibb</b>
-    </div>
-    <div style="margin: 15px;">
-        <label>Please Welcome {{band}}</label>
-        <input type="text" [(ngModel)]="Data['Extra']"  class="form-control" (change)="OnChange($event)">
-        
-    </div>
-    
-    <div>
-      <img [src]="Image" alt="random image"/>
-    </div>
-    
 
-</ng-template>  

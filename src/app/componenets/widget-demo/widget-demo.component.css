@@ -1,11 +1,3 @@
-.container{
-    border-style: solid;
-    border-color: silver;
- /*   width: 950px;*/
-    border-width: 1.0pt;
-    border-radius: 10px;
-}
-
 .toggle-code{
     height:50px;
 }
@@ -18,7 +10,11 @@
     text-align: center;
 }
 .demo-title {
-    
+    color: lightslategray;
     display: inline;
     
+}
+
+.container{
+    font-size: 125%;
 }

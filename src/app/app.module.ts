@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +12,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip'
 import {MatTabsModule} from '@angular/material/tabs';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import {ModalModule  } from '@ksaleh-ng/modal';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import '@angular/compiler';
@@ -23,6 +24,17 @@ import { WidgetDemoComponent } from './componenets/widget-demo/widget-demo.compo
 import { HomeComponent } from './componenets/home/home.component';
 import { TechnicalBlogsComponent } from './componenets/technical-blogs/technical-blogs.component';
 import { CodeComponent } from './componenets/code/code.component';
+import { ModalDemoComponent } from './componenets/modal-demo/modal-demo.component';
+import { AppInitService } from './services/app-init.service';
+import { FacebookComponent } from './componenets/facebook/facebook.component';
+import { FacebookHRefDirective } from './componenets/facebook/facebook-href.directive';
+
+
+export function initApp( appInitService:AppInitService ){
+  return (): Promise<any> => {
+      return appInitService.Init();
+  } 
+}
 
 @NgModule({
   declarations: [
@@ -30,14 +42,18 @@ import { CodeComponent } from './componenets/code/code.component';
     WidgetDemoComponent,
     HomeComponent,
     TechnicalBlogsComponent,
-    CodeComponent
+    CodeComponent,
+    ModalDemoComponent,
+    FacebookComponent,
+    FacebookHRefDirective
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,MatButtonModule,MatToolbarModule,MatSidenavModule,MatListModule,MatCardModule,
-    MatTabsModule,MatTooltipModule,
+    MatTabsModule,MatTooltipModule,MatFormFieldModule, MatInputModule,
     ModalModule,
     FontAwesomeModule,
     HttpClientModule,
@@ -48,7 +64,7 @@ import { CodeComponent } from './componenets/code/code.component';
     
 
   ],
-  providers: [],
+  providers: [AppInitService,{provide:APP_INITIALIZER,useFactory:initApp,deps:[AppInitService],multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
