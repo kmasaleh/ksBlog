@@ -4,6 +4,7 @@
     border-width: 1.0pt;
     border-radius: 10px;
     margin-bottom: 30px;   
+    
 }
 
 .demo-container{
@@ -13,4 +14,52 @@
 
 .demo-content button{
     margin:50px;
+}
+
+
+.post-header-container{
+    margin-bottom:75px;
+    margin-top: 50px;
+    text-align: center;
+}
+.post-header-container img{
+    width: 100px;
+    height:100px;
+}
+.post-header-container-txt-container{
+    display: inline-block;
+    font-size: 180%;
+    vertical-align: middle;
+    margin-left:15px;
+}
+.meta-data{
+    font-size:14px;
+    font-weight: 100;
+    color:green;
+}
+
+.intro{
+    font-size: 120%;
+    margin:30px;
+    line-height: 200%;
+}
+.demo-text{
+    font-size: 16px;
+    line-height: 200%;
+}
+
+@media(max-width:500px){
+    .demo-content button{
+        margin:20px;
+    }
+    .demo-container{
+        margin: 0px;
+    }
+    .post-header-container-txt-container{
+        margin-left:5px;
+    }
+    .intro{
+        margin-left: 5px;
+    }
+
 }

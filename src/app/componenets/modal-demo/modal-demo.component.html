@@ -1,24 +1,24 @@
 <div class="container" >
-    <div style="margin-bottom:75px;margin-left:250px;margin-top: 50px;">
+    <div class="post-header-container" >
         <div style="display: inline-block;">
-            <img src="../../../assets/angular-icon-1.svg"  width="100px;" height="100px;">
+            <img src="../../../assets/angular-icon-1.svg"  >
         </div>
-        <div style="display: inline-block; font-size: 180%;vertical-align: middle;margin-left:15px;">
-        <p >Angular Custom Modal Component</p>
-        <p style="font-size:14px;font-weight: 100;color:green">   Published 26 October 2020 . 15 min read . 0 comments</p>
+        <div class="post-header-container-txt-container">
+          <p >Angular Custom Modal Component</p>
+          <p class="meta-data" >   Published 26 October 2020 . 15 min read . 0 comments</p>
         </div>
     </div>
     
-    <div style="font-size: 120%;margin:30px;line-height: 200%;">
+    <div class="intro" >
         <p>Here we have a simple angular library named @ksaleh/modal that you may install it by issuing the <span style="background-color: #000000; color: #ffffff;">npm i @ksaleh/modal</span> from node command prompt.
         The library provides a simple custom modal component aka "Dialog Box" you may used it for multi purposes inside your code.</p>
     </div>
-    <app-widget-demo [CodeDescriptors]="CodeDescriptors"  Title="Modal Library">
+    <app-widget-demo [CodeDescriptors]="CodeDescriptors"  Title="Modal Library" >
     </app-widget-demo>
 
     
     <div class="demo-container">
-        <p style="font-size: 16px;line-height: 200%;">
+        <p class="demo-text" >
             The modal component is a reusable widget that can be used for multiple purposes.
             It may display a simple informational message telling the user something like the application is about to delete somthing
             or displaying a feed back from a server process.

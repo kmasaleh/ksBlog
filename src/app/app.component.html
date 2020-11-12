@@ -1,46 +1,76 @@
 <div class="main-container">
   <div class="header">
     <mat-toolbar >
-    <mat-toolbar-row >
-      <span>Khaled Saleh personal Blog</span>
-      <img class="avatar" src="./../assets/avataaars.png" alt="Programmer Avatar Image"/>
+      <mat-toolbar-row >
+          <span>Khaled Saleh personal Blog</span>
+          <img class="avatar" src="./../assets/avataaars.png" alt="Programmer Avatar Image"/>
+            <div class="menu-buttons">
+                <button mat-icon-button  aria-label="Home" matTooltip="Home page" matTooltipPosition="below" matTooltipHideDelay="100"
+                  routerLink='home'  >
+                  <mat-icon>home</mat-icon>
+                </button>
 
-      <button mat-icon-button  aria-label="Home" matTooltip="Home page" matTooltipPosition="below" matTooltipHideDelay="100"
-        routerLink='home' style="margin-left: 450px;"
-      >
-        <mat-icon>home</mat-icon>
-      </button>
+                <button mat-icon-button  aria-label="Home" matTooltip="Blogs" matTooltipPosition="below" matTooltipHideDelay="100"
+                routerLink='technical-blogs'
+                >
+                  <mat-icon>article</mat-icon>
+                </button>
 
-      <button mat-icon-button  aria-label="Home" matTooltip="Blogs" matTooltipPosition="below" matTooltipHideDelay="100"
-      routerLink='technical-blogs'
-      >
-        <mat-icon>article</mat-icon>
-      </button>
-
-      <button mat-icon-button  aria-label="Modal Widget" matTooltip="Modal Component" matTooltipPosition="below" matTooltipHideDelay="100"
-        routerLink='modal' >
-        <mat-icon>library_add_check</mat-icon>
-      </button>
-      
-      <img src="../assets/ain.png" style="width:30px;height:30px;" class="ain"
-        matTooltip="منشورات بالعربى" matTooltipPosition="below" matTooltipHideDelay="100"
-      />
-      
-
-    </mat-toolbar-row>
+                <button mat-icon-button  aria-label="Modal Widget" matTooltip="Modal Component" matTooltipPosition="below" matTooltipHideDelay="100"
+                  routerLink='modal' >
+                  <mat-icon>library_add_check</mat-icon>
+                </button>
+                
+                <img src="../assets/ain.png" style="width:30px;height:30px;" class="ain"
+                  matTooltip="منشورات بالعربى" matTooltipPosition="below" matTooltipHideDelay="100"
+                />
+          </div>
+      </mat-toolbar-row>
     </mat-toolbar>
+
+
+    <mat-toolbar class="side-bar-toolbar">
+      <mat-toolbar-row >
+            <div class="side-menu-buttons">
+                <button mat-icon-button  aria-label="Home" matTooltip="Home page" matTooltipPosition="below" matTooltipHideDelay="100"
+                  routerLink='home'  >
+                  <mat-icon>home</mat-icon>
+                </button>
+
+                <button mat-icon-button  aria-label="Home" matTooltip="Blogs" matTooltipPosition="below" matTooltipHideDelay="100"
+                routerLink='technical-blogs'
+                >
+                  <mat-icon>article</mat-icon>
+                </button>
+
+                <button mat-icon-button  aria-label="Modal Widget" matTooltip="Modal Component" matTooltipPosition="below" matTooltipHideDelay="100"
+                  routerLink='modal' >
+                  <mat-icon>library_add_check</mat-icon>
+                </button>
+                
+                <img src="../assets/ain.png" style="width:30px;height:30px;" class="ain"
+                  matTooltip="منشورات بالعربى" matTooltipPosition="below" matTooltipHideDelay="100"
+                />
+          </div>
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+
   </div>
 
 
 
-
+  
   <div class="side-bar">
     <div class="khaled-img-container">
-      <img src="./../assets/khaled.jpg" >
-      
+      <img src="./../assets/khaled.jpg" />
+    </div>  
+   
+    <div class="side-bar-text-container">
       <p>
         Hi, my name is Khaled Saleh, I'm a software eningneer since the early of 90's.
-        This is my personal web site that I use for blogging thoughts both technical and general
+        This is my personal web site that I use for blogging thoughts both technical and general.
       </p>
       <p>
         Hoping you find something interesting here.
@@ -81,9 +111,11 @@
 
 
 
-<footer >
-  <p > Khaled Saleh © 2020</p>
-</footer>
+<div class="footer">
+  <div>
+    <p > Khaled Saleh © 2020</p>
+  </div>
+</div>
 
 
 </div>

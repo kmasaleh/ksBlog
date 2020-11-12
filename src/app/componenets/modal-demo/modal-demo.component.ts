@@ -41,7 +41,7 @@ export class ModalDemoComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,router:Router) { 
     
       this.loadAssets();
-      let port = isDevMode? ":4200":"";
+      let port =  "" ;//isDevMode? ":4200":"";
       this.URL = document.location.protocol +'//'+ document.location.hostname + port + router.url ;
       setTimeout( ()=>{
       this.CodeDescriptors.push(new CodePanelDescriptor("modal-demo.component.ts","ts",this.modal_demo_ts));

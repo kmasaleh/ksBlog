@@ -15,7 +15,7 @@
     </div>
 
     <div class="code-container">
-        <mat-tab-group *ngIf="CodeView" (selectedTabChange)="tabSelected($event)">
+        <mat-tab-group *ngIf="CodeView" (selectedTabChange)="tabSelected($event)" mat-stretch-tabs>
             <ng-container *ngFor="let descriptor of CodeDescriptors">
                 <mat-tab label={{descriptor.Title}} >
                     <app-code   CodeText={{descriptor.CodeText}} CodeClass={{descriptor.CodeClass}}>    </app-code>

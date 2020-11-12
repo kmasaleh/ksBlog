@@ -7,9 +7,8 @@
   }
   
 .khaled-img-container{
-text-align: center;
-width: 100%;
-padding-top: 50px;
+    text-align: center;
+    padding-top: 50px;
 }
 .khaled-img-container img{
 vertical-align: middle;
@@ -17,51 +16,50 @@ width: 155px;
 height: 180px;
 border-radius: 70%;
 }
-.khaled-img-container p{
-width: 80%;
+.side-bar-text-container{
+    padding: 20px;
+    text-align: center;
+}
+.side-bar-text-container p{
 color: white;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: 500;
-text-align: center;
-margin: 0 auto;
 margin-top: 20px;;
 }
 
 .main-container{
 display: grid;
-grid-gap : 2px;
+grid-gap : 1px;
 grid-template-columns: 20% 80%;
-grid-template-rows: 60px auto 60px; 
-width: 100%;
-height: 100%;
-}
+grid-template-rows: 1fr auto 1fr; 
+grid-template-areas: 
+"header header"
+"side-bar main-content"
+"footer footer"
+;
 
+}
+.menu-buttons{
+    grid-area: menu-bittons;
+}
 .header{
-    grid-area: 1/1/2/4;
+    grid-area: header;
 }
 
 .side-bar{
-    grid-area: 2/1/2/2;
+    grid-area: side-bar;
     background-color:  #5FCB71;
     padding-top: 0px;
     margin-top: 0;
-    overflow-x: hidden;
-    width: 100%;
-}
-.main-content{
-    /*
-    grid-area: 2/2/3/4;    
-    padding:5px;    
-    display: flex;
-    flex-flow:row  wrap;
-    align-items: center;
-*/
-    justify-content: center;
-    width: 100%;
 }
 
-footer {
-grid-area: 3/1/4/4;
+.main-content{
+    justify-content: center;
+    grid-area: main-content;
+}
+
+.footer {
+grid-area: footer;
 width: 100%;
 text-align: center;
 padding: 3px;
@@ -69,10 +67,9 @@ background-color: #3f51b5;
 color: white;
 }
 
-footer p{
+.footer p{
 vertical-align: middle;
 padding-top: 15px;
-
 }
 
 
@@ -80,4 +77,32 @@ padding-top: 15px;
 cursor: pointer;
 }
 
+.menu-buttons{
+    margin-left: 300px;
+}
+.side-bar-toolbar{
+    display: none;
+}
+@media screen and (max-width:500px){
 
+    .menu-buttons{
+        display: none;
+    }
+    .side-bar-toolbar{
+        display: flex;
+        
+    }
+    
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto 1fr; 
+        grid-template-areas: "header"  "side-bar" "main-content" "footer";
+  
+    }
+    .header{
+        display: inline-block;
+    }
+
+
+}

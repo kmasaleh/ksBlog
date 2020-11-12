@@ -17,4 +17,18 @@
 
 .container{
     font-size: 125%;
+    margin: 0;
+}
+
+
+@media screen and (max-width:500px){
+    .container {
+        max-width: 90vw;
+        margin: 0;
+    }     
+
+    .code-container{
+        margin: 0;
+        padding: 0;
+    }
 }
