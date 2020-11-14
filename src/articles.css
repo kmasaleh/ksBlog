@@ -1,0 +1,5 @@
+article > summary {
+    visibility: hidden;
+    color: rgb(125, 63, 205);
+    padding: 30px;
+}

@@ -29,7 +29,7 @@
     "@ksaleh-ng/modal": "file:../ksaleh-ng-works/dist/ksaleh-ng/modal",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@types/facebook-js-sdk": "^3.3.1",
-    "aws-sdk": "^2.773.0",
+    "aws-sdk": "^2.791.0",
     "bootstrap": "^4.5.3",
     "prismjs": "^1.22.0",
     "rxjs": "~6.5.4",

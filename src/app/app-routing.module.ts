@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './componenets/home/home.component';
-import { ModalDemoComponent } from './componenets/modal-demo/modal-demo.component';
-import { TechnicalBlogsComponent } from './componenets/technical-blogs/technical-blogs.component';
-import { WidgetDemoComponent } from './componenets/widget-demo/widget-demo.component';
+import { ArticlesComponent } from './components/articles/articles.component';
+import { HomeComponent } from './components/home/home.component';
+import { ModalDemoComponent } from './components/modal-demo/modal-demo.component';
+import { TechnicalBlogsComponent } from './components/technical-blogs/technical-blogs.component';
+import { WidgetDemoComponent } from './components/widget-demo/widget-demo.component';
 
 
 const routes: Routes = [
+  {path:'articles', component:ArticlesComponent},
   {path:'modal', component:ModalDemoComponent},
   {path:'technical-blogs', component:TechnicalBlogsComponent},
   {path:'home', component:HomeComponent},

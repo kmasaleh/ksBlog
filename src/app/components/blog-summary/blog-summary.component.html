@@ -1,0 +1,19 @@
+<div class="box">
+    <div class='img-container'>
+        <a routerLink={{info.routerLink}}>    <img  class='box-img' src={{info.imageSrc}}>  </a> 
+    </div> 
+    <div class='content'>
+        <div class="blog-header">
+        <a class="blog-title" routerLink={{info.routerLink}}>{{info.title}}</a>
+        <p class="sub-title">   {{info.subTitle}}</p>
+        <p class="blog-text">
+            {{info.summary}}
+        </p>
+        
+        <button class="read-more link" mat-icon-button   aria-label="reade more" routerLink={{info.routerLink}} >
+            Read More
+            <mat-icon>read_more</mat-icon>
+        </button>
+    </div>
+
+</div>

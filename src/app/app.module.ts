@@ -20,14 +20,16 @@ import '@angular/compiler';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { WidgetDemoComponent } from './componenets/widget-demo/widget-demo.component';
-import { HomeComponent } from './componenets/home/home.component';
-import { TechnicalBlogsComponent } from './componenets/technical-blogs/technical-blogs.component';
-import { CodeComponent } from './componenets/code/code.component';
-import { ModalDemoComponent } from './componenets/modal-demo/modal-demo.component';
+import { WidgetDemoComponent } from './components/widget-demo/widget-demo.component';
+import { HomeComponent } from './components/home/home.component';
+import { TechnicalBlogsComponent } from './components/technical-blogs/technical-blogs.component';
+import { CodeComponent } from './components/code/code.component';
+import { ModalDemoComponent } from './components/modal-demo/modal-demo.component';
 import { AppInitService } from './services/app-init.service';
-import { FacebookComponent } from './componenets/facebook/facebook.component';
-import { FacebookHRefDirective } from './componenets/facebook/facebook-href.directive';
+import { FacebookComponent } from './components/facebook/facebook.component';
+import { FacebookHRefDirective } from './components/facebook/facebook-href.directive';
+import { ArticlesComponent } from './components/articles/articles.component';
+import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
 
 
 export function initApp( appInitService:AppInitService ){
@@ -45,7 +47,9 @@ export function initApp( appInitService:AppInitService ){
     CodeComponent,
     ModalDemoComponent,
     FacebookComponent,
-    FacebookHRefDirective
+    FacebookHRefDirective,
+    ArticlesComponent,
+    BlogSummaryComponent
     
   ],
   imports: [

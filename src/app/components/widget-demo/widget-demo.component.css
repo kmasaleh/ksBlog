@@ -1,16 +1,18 @@
 .toggle-code{
     height:50px;
+    background: #3b1ebb ;
+    color: lightgray;
+    vertical-align: middle;
 }
 .toggle-code button{
     float: right;
-    color: lightgray;
 }
 .demo{
     margin: 20px;
     text-align: center;
 }
 .demo-title {
-    color: lightslategray;
+ 
     display: inline;
     
 }
