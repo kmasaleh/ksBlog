@@ -1,0 +1,21 @@
+<div class='container'>
+    <ng-container *ngFor="let tag of tags" >
+    
+        <div class='tag'>
+            <span>{{tag.label}}</span>
+        </div>
+    
+    <!--
+        <ng-container *ngTemplateOutlet="tag;context:tag">
+
+        </ng-container>
+-->
+    </ng-container>
+</div>
+
+
+
+
+<ng-template #tag let-label="label">
+    <div class='tag'>{{label}}</div>
+</ng-template>

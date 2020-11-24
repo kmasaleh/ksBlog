@@ -21,9 +21,7 @@ export class BlogSummaryComponent implements OnInit {
     this.info = info;
   }
   
-  constructor(
-  ) {
-
+  constructor(  ) {
    }
 
   ngOnInit(): void {

@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import {Info} from './info';
 import { RandomPictures } from './random-pictures';
 import { Simple } from './simple';
-import { CodePanelDescriptor } from '../widget-demo/widget-demo.component';
+import { CodePanelDescriptor } from '../../widget-demo/widget-demo.component';
 import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 import { isDevMode } from '@angular/core';

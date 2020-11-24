@@ -41,6 +41,21 @@ export class TechnicalBlogsComponent implements OnInit {
                 `
     }
     this.BLOGS.push(summary1);
+
+
+    summary1   = {
+      routerLink : '/dropdown',
+      imageSrc:"../assets/capture.png",
+      title:  'Dropdown Data Lookup Component',
+      subTitle:'Published 11/23/2020 . 5 min read',
+      summary:  `Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                 Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                 natoque penatibus et magnis dis parturient montes, nascetur
+                 ridiculus mus. Donec quam felis, ultricies...
+                `
+    }
+    this.BLOGS.push(summary1);
+
   }
 
 }

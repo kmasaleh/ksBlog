@@ -24,13 +24,17 @@ import { WidgetDemoComponent } from './components/widget-demo/widget-demo.compon
 import { HomeComponent } from './components/home/home.component';
 import { TechnicalBlogsComponent } from './components/technical-blogs/technical-blogs.component';
 import { CodeComponent } from './components/code/code.component';
-import { ModalDemoComponent } from './components/modal-demo/modal-demo.component';
+import { ModalDemoComponent } from './components/blogs/modal-demo/modal-demo.component';
 import { AppInitService } from './services/app-init.service';
 import { FacebookComponent } from './components/facebook/facebook.component';
 import { FacebookHRefDirective } from './components/facebook/facebook-href.directive';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
+import { WorkExperienceComponent } from './components/blogs/work-experience/work-experience.component';
+import { TagsComponent } from './components/tags/tags.component';
 
+import { DropdownLookupDemoComponent } from './components/blogs/dropdown-lookup-demo/dropdown-lookup-demo.component';
+import {DropdownLookupModule} from '@ksaleh-ng/dropdown-lookup';
 
 export function initApp( appInitService:AppInitService ){
   return (): Promise<any> => {
@@ -49,8 +53,10 @@ export function initApp( appInitService:AppInitService ){
     FacebookComponent,
     FacebookHRefDirective,
     ArticlesComponent,
-    BlogSummaryComponent
-    
+    BlogSummaryComponent,
+    WorkExperienceComponent,
+    TagsComponent,
+    DropdownLookupDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -62,11 +68,8 @@ export function initApp( appInitService:AppInitService ){
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
-    
-    
-    
-
+    NgbModule,
+    DropdownLookupModule
   ],
   providers: [AppInitService,{provide:APP_INITIALIZER,useFactory:initApp,deps:[AppInitService],multi:true}],
   bootstrap: [AppComponent]

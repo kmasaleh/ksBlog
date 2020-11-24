@@ -26,6 +26,7 @@
     "@fortawesome/angular-fontawesome": "^0.6.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@ksaleh-ng/dropdown-lookup": "file:../ksaleh-ng-works/dist/ksaleh-ng/dropdown-lookup",
     "@ksaleh-ng/modal": "file:../ksaleh-ng-works/dist/ksaleh-ng/modal",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@types/facebook-js-sdk": "^3.3.1",

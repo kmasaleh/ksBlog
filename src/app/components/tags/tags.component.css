@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    padding: 10px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tag{
+    background: lightgray;
+    border-radius: 7px;
+    min-width: 80px;
+    min-height: 35px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:10px;
+    
+}
+
+.tag span{
+    font-weight: 500;
+}

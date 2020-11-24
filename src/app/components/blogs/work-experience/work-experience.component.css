@@ -1,0 +1,82 @@
+
+.section {
+    position: relative;
+    line-height: 150%;
+    font-size: 110%;
+
+}
+header{
+    background: lightgrey;
+    font-size: 200%;
+    padding-left: 50px;
+    padding-top: 10px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.title , .interval {
+    position: absolute;
+    left :0px;
+    padding: 10px;
+}
+.title{
+    top: 0px;
+}
+.interval{
+top: 20px;
+}
+
+.address ,.employer{
+    position: absolute;
+    right :0px;
+    padding: 10px;
+}
+
+.employer{
+    top: 0px;
+}
+.address{
+    top: 20px;
+}
+.experience{
+    margin-top: 0px;
+    padding: 15px;
+    border-left : solid 7px red;
+}
+
+.section-header{
+    display: block;
+    background: lightskyblue;
+    width: 100%;
+    height: 70px;
+    color: black;
+    margin: 0;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.section{
+    border : solid 1px lightblue;
+    border-radius: 10px;
+    margin-bottom: 20px;   
+    
+}
+
+
+.summary{
+    border : solid 1px lightblue;
+    border-radius: 10px;
+    margin-bottom: 20px;   
+    background: #002451;
+    color: aqua;
+    padding: 10px;
+    line-height: 150%;
+    font-weight: 300;
+    font-size: 140%;
+
+}
+.summary p{
+    margin-left: 70px;
+    margin-right: 20px;
+}
+.section:nth-child(2n+3) {background: lightpink}

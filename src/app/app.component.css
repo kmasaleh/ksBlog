@@ -21,7 +21,8 @@ border-radius: 70%;
     text-align: center;
 }
 .side-bar-text-container p{
-color: white;
+/*color: white;*/
+color: black;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: 500;
 margin-top: 20px;;
@@ -48,7 +49,9 @@ grid-template-areas:
 
 .side-bar{
     grid-area: side-bar;
-    background-color:  #5FCB71;
+    /*background-color:  #5FCB71;*/
+    background: white;
+    
     padding-top: 0px;
     margin-top: 0;
 }
