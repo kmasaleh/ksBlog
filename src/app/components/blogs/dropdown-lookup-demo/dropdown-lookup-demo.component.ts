@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PREDICATES,Configurations,LocalDataProvider, DataProviderServiceToken,dataProviderConfgToken,LocalDataProviderConfig} from '@ksaleh-ng/dropdown-lookup';
+import {PREDICATES,Configurations,LocalDataProvider, DataProviderServiceToken,
+  dataProviderConfgToken,LocalDataProviderConfig} from '@ksaleh/dropdown-lookup';
 import {take} from 'rxjs/operators';
 
 import { HttpDataService } from './http-data-serivce';
@@ -33,7 +34,7 @@ export class DropdownLookupDemoComponent implements OnInit {
   constructor( ) { 
     this.configurations = new Configurations();
     this.configurations.columns = 
-  /*  
+  
     [
       {field:'id',title:'ID',name:'ID',width:80},
       {field:'name',title:'Name',name:'Name',width:200},
@@ -41,8 +42,8 @@ export class DropdownLookupDemoComponent implements OnInit {
       {field:'gender',title:'Gender',name:'gender',width:80},
       {field:'status',title:'Status',name:'status',width:100},
     ] ;
-*/
-      
+
+/*      
     [
         {field:'id',title:'ID',name:'ID',width:80},
         {field:'name',title:'Name',name:'Name',width:200},
@@ -50,7 +51,7 @@ export class DropdownLookupDemoComponent implements OnInit {
         {field:'birthdate',title:'Date Of Birth',name:'Birth',width:100},
         {field:'project',title:'Project',name:'Project',width:75}
       ] ;
-    
+  */  
       this.configurations.filter = {field:'id',predicate:PREDICATES.GTE,value:null};
       this.configurations.lookupField=()=> 'name';
       this.configurations.onSelect = (obs)=>{

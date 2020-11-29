@@ -34,7 +34,7 @@ import { WorkExperienceComponent } from './components/blogs/work-experience/work
 import { TagsComponent } from './components/tags/tags.component';
 
 import { DropdownLookupDemoComponent } from './components/blogs/dropdown-lookup-demo/dropdown-lookup-demo.component';
-import {DropdownLookupModule} from '@ksaleh-ng/dropdown-lookup';
+import {DropdownLookupModule} from '@ksaleh/dropdown-lookup';
 
 export function initApp( appInitService:AppInitService ){
   return (): Promise<any> => {

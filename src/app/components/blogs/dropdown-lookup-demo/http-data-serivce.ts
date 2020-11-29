@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {Filter, IDataProvider, LocalDataProvider } from '@ksaleh-ng/dropdown-lookup';
+import {Filter, IDataProvider, LocalDataProvider } from '@ksaleh/dropdown-lookup';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
