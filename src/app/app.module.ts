@@ -28,7 +28,7 @@ import { ModalDemoComponent } from './components/blogs/modal-demo/modal-demo.com
 import { AppInitService } from './services/app-init.service';
 import { FacebookComponent } from './components/facebook/facebook.component';
 import { FacebookHRefDirective } from './components/facebook/facebook-href.directive';
-import { ArticlesComponent } from './components/articles/articles.component';
+//import { ArticlesComponent } from './components/articles/articles.component';
 import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
 import { WorkExperienceComponent } from './components/blogs/work-experience/work-experience.component';
 import { TagsComponent } from './components/tags/tags.component';
@@ -52,7 +52,7 @@ export function initApp( appInitService:AppInitService ){
     ModalDemoComponent,
     FacebookComponent,
     FacebookHRefDirective,
-    ArticlesComponent,
+   // ArticlesComponent,
     BlogSummaryComponent,
     WorkExperienceComponent,
     TagsComponent,
